@@ -24,14 +24,14 @@
         .esh-basket-item--middle {
           line-height: 1rem; } }
     .esh-basket-item--mark {
-      color: #00A69C; }
+      color: #ffa500; }
   .esh-basket-image {
     height: 8rem; }
   .esh-basket-input {
     line-height: 1rem;
     width: 100%; }
   .esh-basket-checkout {
-    background-color: #83D01B;
+    background-color: #0000ff;
     border: 0;
     border-radius: 0;
     color: #FFFFFF;
@@ -44,5 +44,5 @@
     text-transform: uppercase;
     transition: all 0.35s; }
     .esh-basket-checkout:hover {
-      background-color: #4a760f;
+      background-color: #000099;
       transition: all 0.35s; }
