@@ -11,7 +11,7 @@
     height: 36px;
     margin-top: .5rem; }
   .esh-basketstatus-badge {
-    background-color: #83D01B;
+    background-color: #321bb6;
     border-radius: 50%;
     color: #FFFFFF;
     display: block;
@@ -38,5 +38,5 @@
     width: 1.5rem; }
   .esh-basketstatus:hover .esh-basketstatus-badge {
     background-color: transparent;
-    color: #75b918;
+    color: #2c18a0;
     transition: all 0.35s; }

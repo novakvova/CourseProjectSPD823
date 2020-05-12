@@ -41,11 +41,11 @@
     opacity: 1;
     pointer-events: all; }
   .esh-orders-link {
-    color: #83D01B;
+    color: #321bb6;
     text-decoration: none;
     transition: color 0.35s; }
     .esh-orders-link:hover {
-      color: #75b918;
+      color: #2c18a0;
       transition: color 0.35s; }
   .esh-orders-detail-section {
     padding-bottom: 30px; }
