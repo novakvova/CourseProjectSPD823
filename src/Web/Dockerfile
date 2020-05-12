@@ -7,21 +7,22 @@
 #
 # RUN COMMAND
 #  docker run --name eshopweb --rm -it -p 5106:5106 web
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
+EXPOSE 80
 
-COPY *.sln .
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+WORKDIR /src
+COPY ["Web.csproj", "Web/"]
+RUN dotnet restore "Web.csproj"
 COPY . .
-WORKDIR /app/src/Web
-RUN dotnet restore
+WORKDIR "/src/Web"
+RUN dotnet build "Web.csproj" -c Release -o /app/build
 
-RUN dotnet publish -c Release -o out
+FROM build AS publish
+RUN dotnet publish "Web.csproj" -c Release -o /app/publish
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
+FROM base AS final
 WORKDIR /app
-COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
-
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Web.dll"]
