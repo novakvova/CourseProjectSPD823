@@ -15,8 +15,8 @@ pipeline  {
 		stage("Create docker image") {
             steps {
                 echo 'Creating docker image ...'
-                dir('CarSale/.'){
-                  sh "docker build -t novakvova/carsale . "
+                dir('src/Web/.'){
+                  sh "docker build -t novakvova/eshop . "
                 }
             }
         }
@@ -41,27 +41,27 @@ pipeline  {
 //                '''
 //            }
 //        }
-       stage("docker stop") {
-          steps {
-               echo " ============== stoping all images =================="
-               sh '''
-               docker stop carsale
-               '''
-           }
-      } 
-       stage("docker remove") {
-          steps {
-               echo " ============== removing all docker containers =================="
-               sh '''
-               docker rm carsale
-               '''
-           }
-       }
+    //    stage("docker stop") {
+    //       steps {
+    //            echo " ============== stoping all images =================="
+    //            sh '''
+    //            docker stop eshop
+    //            '''
+    //        }
+    //   } 
+    //    stage("docker remove") {
+    //       steps {
+    //            echo " ============== removing all docker containers =================="
+    //            sh '''
+    //            docker rm eshop
+    //            '''
+    //        }
+    //    }
        stage("docker run") {
            steps {
                echo " ============== starting chatterbox =================="
                sh '''
-              docker run -d --restart=always --name carsale -p 80:80 novakvova/carsale
+              docker run -d --restart=always --name eshop -p 100:80 novakvova/eshop
                '''
            }
       }
