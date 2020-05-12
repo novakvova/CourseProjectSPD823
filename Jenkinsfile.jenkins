@@ -15,7 +15,7 @@ pipeline  {
 		stage("Create docker image") {
             steps {
                 echo 'Creating docker image ...'
-                dir('src/Web/.'){
+                dir('src/.'){
                   sh "docker build -t novakvova/eshop . "
                 }
             }
