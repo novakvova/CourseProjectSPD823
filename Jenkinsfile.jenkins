@@ -41,22 +41,22 @@ pipeline  {
 //                '''
 //            }
 //        }
-    //    stage("docker stop") {
-    //       steps {
-    //            echo " ============== stoping all images =================="
-    //            sh '''
-    //            docker stop eshop
-    //            '''
-    //        }
-    //   } 
-    //    stage("docker remove") {
-    //       steps {
-    //            echo " ============== removing all docker containers =================="
-    //            sh '''
-    //            docker rm eshop
-    //            '''
-    //        }
-    //    }
+       stage("docker stop") {
+          steps {
+               echo " ============== stoping all images =================="
+               sh '''
+               docker stop eshop
+               '''
+           }
+      } 
+       stage("docker remove") {
+          steps {
+               echo " ============== removing all docker containers =================="
+               sh '''
+               docker rm eshop
+               '''
+           }
+       }
        stage("docker run") {
            steps {
                echo " ============== starting chatterbox =================="
