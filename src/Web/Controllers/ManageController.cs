@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.eShopWeb.ApplicationCore.Interfaces;
 using Microsoft.eShopWeb.Infrastructure.Identity;
+using Microsoft.eShopWeb.Infrastructure.Services;
 using Microsoft.eShopWeb.Web.Services;
 using Microsoft.eShopWeb.Web.ViewModels.Manage;
 using System;
@@ -120,12 +121,22 @@ namespace Microsoft.eShopWeb.Web.Controllers
             }
 
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
-            var email = user.Email;
-            await _emailSender.SendEmailConfirmationAsync(email, callbackUrl);
+            var callbackUrl = Url.Action(
+                        "myaccount",
+                        "manage",
+                        new { userId = user.Id, code = code },
+                        protocol: HttpContext.Request.Scheme);
+            EmailSender emailService = new EmailSender();
+            await emailService.SendEmailAsync(model.Email, "Confirm your account",
+                $"Для підтвердження реєстраціїї перейдіть по посиланню: <a href='{callbackUrl}'>На сайт!</a>");
+            return RedirectToAction(nameof(MyAccount));
+            //return Content("Для закінчення реєстраціїї перевірте електронну пошту та перейдіть по посиланню вказаному у листі");
+            //var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
+            //var email = user.Email;
+            //await _emailSender.SendEmailConfirmationAsync(email, callbackUrl);
 
-            StatusMessage = "Verification email sent. Please check your email.";
-            return RedirectToAction(nameof(Index));
+            //StatusMessage = "Verification email sent. Please check your email.";
+            //return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
