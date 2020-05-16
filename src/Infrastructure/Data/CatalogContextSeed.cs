@@ -59,11 +59,11 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         {
             return new List<CatalogBrand>()
             {
-                new CatalogBrand("Azure"),
-                new CatalogBrand(".NET"),
-                new CatalogBrand("Visual Studio"),
-                new CatalogBrand("SQL Server"),
-                new CatalogBrand("Other")
+                new CatalogBrand("Adidas"),
+                new CatalogBrand("Nike"),
+                new CatalogBrand("Balenciaga"),
+                new CatalogBrand("Puma"),
+                new CatalogBrand("Інше")
             };
         }
 
@@ -71,10 +71,10 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         {
             return new List<CatalogType>()
             {
-                new CatalogType("Mug"),
-                new CatalogType("T-Shirt"),
-                new CatalogType("Sheet"),
-                new CatalogType("USB Memory Stick")
+                new CatalogType("Літнє"),
+                new CatalogType("Зимове"),
+                new CatalogType("Весняне"),
+                new CatalogType("Осіннє")
             };
         }
 
