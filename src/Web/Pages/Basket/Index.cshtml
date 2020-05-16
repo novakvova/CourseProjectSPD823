@@ -1,7 +1,7 @@
 ﻿@page "{handler?}"
 @model IndexModel
 @{
-    ViewData["Title"] = "Basket";
+    ViewData["Title"] = "Кошик";
 }
 <section class="esh-catalog-hero">
     <div class="container">
@@ -95,11 +95,11 @@
     else
     {
         <h3 class="esh-catalog-items row">
-            Корзина пуста.
+            Кошик пустий.
         </h3>
         
         <section class="esh-basket-item">
-            <a asp-page="/Index" class="btn esh-basket-checkout text-white">[ Continue Shopping..]</a>
+            <a asp-page="/Index" class="btn esh-basket-checkout text-white">[ Продовжити шопінг...]</a>
         </section>
     }
 </div>
