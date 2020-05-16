@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Вхід на сайт";
 }
 
 
@@ -33,17 +33,17 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-default">Log in</button>
+                        <button type="submit" class="btn btn-default">Вхід</button>
                     </div>
                     <div class="form-group">
                         <p>
-                            <a asp-page="./ForgotPassword">Forgot your password?</a>
+                            <a asp-page="./ForgotPassword">Забули пароль?</a>
                         </p>
                         <p>
-                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Зареєструватися на сайті</a>
                         </p>
                     </div>
-                    <p>
+                    @*<p>
                         Note that for demo purposes you don't need to register and can login with these credentials:
                     </p>
                     <p>
@@ -51,7 +51,7 @@
                     </p>
                     <p>
                         Password: <b>Pass@word1</b>
-                    </p>
+                    </p>*@
                 </form>
             </section>
         </div>

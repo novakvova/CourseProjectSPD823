@@ -39,13 +39,15 @@ namespace Microsoft.eShopWeb.Web.Areas.Identity.Pages.Account
         {
             [Required]
             [EmailAddress]
+            [Display(Name = "Електронна адреса")]
             public string Email { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
+            [Display(Name = "Пароль")]
             public string Password { get; set; }
 
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Запам'ятати мене?")]
             public bool RememberMe { get; set; }
         }
 
