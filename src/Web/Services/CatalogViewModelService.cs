@@ -84,7 +84,7 @@ namespace Microsoft.eShopWeb.Web.Services
 
             var items = new List<SelectListItem>
             {
-                new SelectListItem() { Value = null, Text = "All", Selected = true }
+                new SelectListItem() { Value = null, Text = "Всі", Selected = true }
             };
             foreach (CatalogBrand brand in brands)
             {
@@ -100,7 +100,7 @@ namespace Microsoft.eShopWeb.Web.Services
             var types = await _typeRepository.ListAllAsync();
             var items = new List<SelectListItem>
             {
-                new SelectListItem() { Value = null, Text = "All", Selected = true }
+                new SelectListItem() { Value = null, Text = "Всі", Selected = true }
             };
             foreach (CatalogType type in types)
             {
