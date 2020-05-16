@@ -82,18 +82,18 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
         {
             return new List<CatalogItem>()
             {
-                new CatalogItem(2,2, ".NET Bot Black Sweatshirt", ".NET Bot Black Sweatshirt", 19.5M,  "http://13.84.212.103:100/images/products/1.png"),
-                new CatalogItem(1,2, ".NET Black & White Mug", ".NET Black & White Mug", 8.50M, "http://13.84.212.103:100/images/products/2.png"),
-                new CatalogItem(2,5, "Prism White T-Shirt", "Prism White T-Shirt", 12,  "http://13.84.212.103:100/images/products/3.png"),
-                new CatalogItem(2,2, ".NET Foundation Sweatshirt", ".NET Foundation Sweatshirt", 12, "http://13.84.212.103:100/images/products/4.png"),
-                new CatalogItem(3,5, "Roslyn Red Sheet", "Roslyn Red Sheet", 8.5M, "http://13.84.212.103:100/images/products/5.png"),
-                new CatalogItem(2,2, ".NET Blue Sweatshirt", ".NET Blue Sweatshirt", 12, "http://13.84.212.103:100/images/products/6.png"),
-                new CatalogItem(2,5, "Roslyn Red T-Shirt", "Roslyn Red T-Shirt",  12, "http://13.84.212.103:100/images/products/7.png"),
-                new CatalogItem(2,5, "Kudu Purple Sweatshirt", "Kudu Purple Sweatshirt", 8.5M, "http://13.84.212.103:100/images/products/8.png"),
-                new CatalogItem(1,5, "Cup<T> White Mug", "Cup<T> White Mug", 12, "http://13.84.212.103:100/images/products/9.png"),
-                new CatalogItem(3,2, ".NET Foundation Sheet", ".NET Foundation Sheet", 12, "http://13.84.212.103:100/images/products/10.png"),
-                new CatalogItem(3,2, "Cup<T> Sheet", "Cup<T> Sheet", 8.5M, "http://13.84.212.103:100/images/products/11.png"),
-                new CatalogItem(2,5, "Prism White TShirt", "Prism White TShirt", 12, "http://13.84.212.103:100/images/products/12.png")
+                new CatalogItem(2,2, "Куртка Nike зимова з капюшоном", "Куртка Nike зимова з капюшоном", 3500M,  "http://13.84.212.103:100/images/products/1.png"),
+                new CatalogItem(1,2, "Кеди Nike", "Кеди Nike", 800, "http://13.84.212.103:100/images/products/2.png"),
+                new CatalogItem(2,5, "Зимове взуття", "Зимове взуття", 1200,  "http://13.84.212.103:100/images/products/3.png"),
+                new CatalogItem(2,2, "Кросівки Nike зимові", "Кросівки Nike зимові", 1500, "http://13.84.212.103:100/images/products/4.png"),
+                new CatalogItem(3,5, "Футболка біла", "Футболка біла", 259, "http://13.84.212.103:100/images/products/5.png"),
+                new CatalogItem(2,2, "Блакитний світшот Nike", "Блакитний світшот Nike", 1200, "http://13.84.212.103:100/images/products/6.png"),
+                new CatalogItem(2,5, "Червона футболка", "Червона футболка",  250, "http://13.84.212.103:100/images/products/7.png"),
+                new CatalogItem(2,5, "Фіолетовий світшот", "Фіолетовий світшот", 350.5M, "http://13.84.212.103:100/images/products/8.png"),
+                new CatalogItem(1,5, "Босоніжки жіночі", "Босоніжки жіночі", 750, "http://13.84.212.103:100/images/products/9.png"),
+                new CatalogItem(3,2, "Кеди Nike чоловічі", "Кеди Nike чоловічі", 2300, "http://13.84.212.103:100/images/products/10.png"),
+                new CatalogItem(3,2, "Галоші Nike", "Галоші Nike", 200.5M, "http://13.84.212.103:100/images/products/11.png"),
+                new CatalogItem(2,5, "Кирзові чоботи", "Кирзові чоботи", 300, "http://13.84.212.103:100/images/products/12.png")
             };
         }
     }
