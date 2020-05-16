@@ -94,7 +94,7 @@ namespace Microsoft.eShopWeb.Infrastructure.Data
                 new CatalogItem(3,2, "Кеди Nike чоловічі", "Кеди Nike чоловічі", 2300, "http://13.84.212.103:100/images/products/10.png"),
                 new CatalogItem(3,2, "Галоші Nike", "Галоші Nike", 200.5M, "http://13.84.212.103:100/images/products/11.png"),
                 new CatalogItem(2,5, "Кирзові чоботи", "Кирзові чоботи", 300, "http://13.84.212.103:100/images/products/12.png")
-            };s
+            };
         }
     }
 }
