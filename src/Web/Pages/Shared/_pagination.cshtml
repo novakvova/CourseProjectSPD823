@@ -9,13 +9,13 @@
 					   id="Previous"
 					   asp-route-pageid="@(Model.ActualPage - 1)"
 					   aria-label="Previous">
-						Previous
+						Попередня
 					</a>
 				</div>
 				
 				<div class="col-md-8 col-xs-12">
 					<span class="esh-pager-item">
-						Showing @Model.ItemsPerPage of @Model.TotalItems products - Page @(Model.ActualPage + 1) - @Model.TotalPages
+						Показано @Model.ItemsPerPage із @Model.TotalItems продуктів - Сторінка @(Model.ActualPage + 1) - @Model.TotalPages
 					</span>
 				</div>
 		        
@@ -24,7 +24,7 @@
 					   id="Next"
 					   asp-route-pageid="@(Model.ActualPage + 1)"
 					   aria-label="Next">
-						Next
+						Наступна
 					</a>
 				</div>
 			</nav>
