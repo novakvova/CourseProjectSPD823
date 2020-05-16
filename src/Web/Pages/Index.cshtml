@@ -22,6 +22,11 @@
     </div>
 </section>
 <div class="container">
+    <div>
+        <a class="btn btn-info" asp-page="/Admin/CreateProductItem">
+            Додати товар
+        </a>
+</div>
     @if (Model.CatalogModel.CatalogItems.Any())
     {
         <partial name="_pagination" for="CatalogModel.PaginationInfo" />
